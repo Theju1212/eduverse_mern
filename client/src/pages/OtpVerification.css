@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+.otp-container {
+  height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.otp-card {
+  width: 24rem;
+  background-color: #1a2a33;
+  border: 1px solid #22c55e;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  animation: slideUp 0.8s ease forwards;
+}
+
+.otp-input {
+  background-color: #0f2027;
+  color: white;
+  border: 1px solid #22c55e;
+  letter-spacing: 4px;
+  font-size: 1.2rem;
+}
+
+.otp-input::placeholder {
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

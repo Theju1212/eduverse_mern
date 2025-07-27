@@ -1,0 +1,15 @@
+.footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  text-align: center;
+
+  /* Smaller padding for thin footer */
+  padding: 4px 0;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 12px; /* smaller font size */
+}

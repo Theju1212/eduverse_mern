@@ -1,0 +1,86 @@
+const downloadCertificate = (course) => {
+  const dummyName = "Velvaluri Thejaswini";
+  const date = new Date().toLocaleDateString();
+
+  const certificateHTML = `
+    <html>
+      <head>
+        <style>
+          body {
+            font-family: 'Georgia', serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          }
+
+          .certificate-container {
+            background: white;
+            border: 8px double #2c3e50;
+            padding: 40px 60px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0,0,0,0.15);
+          }
+
+          .certificate-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+          }
+
+          .certificate-body {
+            font-size: 20px;
+            color: #34495e;
+            line-height: 1.6;
+          }
+
+          .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+          }
+
+          .footer {
+            margin-top: 40px;
+          }
+
+          .signature {
+            border-top: 1px solid #000;
+            width: 200px;
+            margin: 20px auto 0 auto;
+            font-style: italic;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="certificate-container">
+          <div class="certificate-title">🎓 Eduverse Certificate of Completion 🎓</div>
+          <div class="certificate-body">
+            This is to certify that<br><br>
+            <span class="name">${dummyName}</span><br><br>
+            has successfully completed the course<br><br>
+            <strong>${course.title}</strong><br><br>
+            in category <strong>${course.category}</strong><br><br>
+            on <strong>${date}</strong>.
+          </div>
+          <div class="footer">
+            <div class="signature">Program Director</div>
+          </div>
+        </div>
+      </body>
+    </html>
+  `;
+
+  const element = document.createElement('div');
+  element.innerHTML = certificateHTML;
+
+  html2pdf().from(element).set({
+    margin: 0,
+    filename: `${course.title}_Certificate.pdf`,
+    html2canvas: { scale: 2 },
+    jsPDF: { format: 'a4', orientation: 'portrait' }
+  }).save();
+};

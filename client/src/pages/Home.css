@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);/* Green shade like homepage */
+  color: white;
+}
+
+.home-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: slideDown 1s ease-out;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  animation: fadeIn 2s ease-in;
+}
+
+.highlight {
+  color: #22c55e; /* Bright green */
+  font-weight: bold;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.course-card {
+  background-color: #065f46;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 280px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+  animation: slideUp 1s ease forwards;
+}
+
+.course-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.course-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  font-size: 1rem;
+  color: #d1fae5;
+}
+
+/* 🟢 New blinking circular button at top-right */
+.blinking-box {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #047857;
+  padding: 1.2rem;
+  border: 3px solid #22c55e;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  animation: blink 1.5s infinite, bounce 1.2s ease-in-out infinite;
+  width: 80px; /* bigger width */
+  height: 80px; /* bigger height */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blinking-box:hover {
+  background-color: #065f46;
+  transform: scale(1.1);
+}
+
+
+/* 🔁 Animations */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}

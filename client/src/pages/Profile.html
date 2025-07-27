@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="stylesheet" href="Profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-heading">My Profile</div>
+    <div class="profile-box">
+      <div class="profile-left">
+        <img src="assets/profile.jpg" alt="Profile Image" class="profile-img" />
+      </div>
+      <div class="profile-right">
+        <form class="profile-form">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" value="Tejaswini Velvaluri" disabled />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" value="tejaswini@example.com" disabled />
+          </div>
+          <div>
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Enter your location" />
+          </div>
+          <div>
+            <label for="bio">Bio</label>
+            <input type="text" id="bio" placeholder="Write a short bio" />
+          </div>
+          <div>
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" placeholder="e.g. HTML, CSS, JS" />
+          </div>
+          <div style="text-align: right;">
+            <button type="submit" style="
+              background-color: #5b3cc4;
+              color: white;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 10px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+            ">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

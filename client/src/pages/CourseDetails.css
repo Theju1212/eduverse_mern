@@ -1,0 +1,65 @@
+/* src/pages/CourseDetails.css */
+.course-detail-container {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-detail-inner {
+  max-width: 800px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag, .difficulty {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.video-section {
+  margin: 2rem 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.actions button {
+  margin-right: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.actions button:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+.course-image img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.course-image img:hover {
+  transform: scale(1.03);
+}

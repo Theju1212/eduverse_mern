@@ -1,0 +1,153 @@
+/* Global body settings (background, font) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* same as homepage */
+  color: white;
+}
+
+/* Auth container centers form */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Form card style */
+.auth-form {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #22c55e;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 255, 128, 0.2);
+  animation: slideUp 1s ease forwards;
+}
+
+/* Form headings */
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #22c55e;
+}
+
+/* Inputs & dropdowns */
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 12px;
+  margin: 0.6rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  color: #000;
+}
+
+/* Primary button */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 1rem;
+  background-color: #22c55e;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #16a34a;
+}
+
+/* Forgot password link */
+.forgot-link {
+  display: block;
+  margin-top: 0.8rem;
+  text-align: right;
+  color: #facc15;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Social login section */
+.social-login {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.social-login p {
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
+
+/* Social buttons */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-buttons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-buttons .google {
+  background-color: #db4437;
+  color: white;
+}
+
+.social-buttons .facebook {
+  background-color: #4267B2;
+  color: white;
+}
+
+.social-buttons .github {
+  background-color: #333;
+  color: white;
+}
+
+.social-buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* Bottom switch login/register text */
+.switch-auth {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.switch-auth a {
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
